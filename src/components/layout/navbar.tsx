@@ -37,20 +37,18 @@ export const Navbar = () => {
                 scrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/70 backdrop-blur-md"
             )}
         >
-            <Container className="flex h-16 items-center justify-between">
-                <Link href="/" className="flex items-center space-x-2 group">
-                    <div className="relative flex h-10 w-10 items-center justify-center">
+            <Container className="flex h-16 md:h-20 items-center justify-between">
+                <Link href="/" className="flex items-center group">
+                    <div className="relative flex h-12 w-12 md:h-16 md:w-16 items-center justify-center">
                         <Image
                             src="/cpc-logo.png"
                             alt="CPC Logo"
-                            width={40}
-                            height={40}
-                            className="object-contain"
+                            width={64}
+                            height={64}
+                            className="object-contain transition-transform duration-300 group-hover:scale-105"
+                            priority
                         />
                     </div>
-                    <span className="font-mono font-bold text-lg tracking-tight">
-                        DIU<span className="text-emerald-500">CPC</span>
-                    </span>
                 </Link>
 
                 {/* Desktop Menu */}

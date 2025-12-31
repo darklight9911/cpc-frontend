@@ -23,13 +23,7 @@ export const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <div className="inline-flex items-center space-x-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        <span>Recruitment 2024 is Live</span>
-                    </div>
+
 
                     <h1 className="text-6xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.1] font-heading">
                         Code. <br />
@@ -57,41 +51,7 @@ export const Hero = () => {
                 </motion.div>
 
                 {/* Hero Visual - Tech Geometry */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative hidden lg:block"
-                >
-                    <div className="relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
-                        {/* Abstract Tech Visual */}
-                        <div className="relative rounded-2xl border border-border/10 bg-card/50 backdrop-blur-xl p-8 shadow-2xl overflow-hidden aspect-square flex items-center justify-center group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-50" />
 
-                            {/* Animated Hexagon Grid */}
-                            <div className="grid grid-cols-2 gap-4 relative z-20">
-                                <motion.div
-                                    animate={{ y: [0, -10, 0] }}
-                                    transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                                    className="w-32 h-32 rounded-xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center shadow-lg shadow-primary/20"
-                                >
-                                    <Terminal className="h-12 w-12 text-white" />
-                                </motion.div>
-                                <motion.div
-                                    animate={{ y: [0, 10, 0] }}
-                                    transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
-                                    className="w-32 h-32 rounded-xl bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center shadow-lg shadow-secondary/20 mt-12"
-                                >
-                                    <Code2 className="h-12 w-12 text-white" />
-                                </motion.div>
-                            </div>
-                        </div>
-
-                        {/* Floating elements */}
-                        <div className="absolute -top-10 -right-10 w-24 h-24 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-                        <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-primary/20 rounded-full blur-3xl animate-pulse delay-700" />
-                    </div>
-                </motion.div>
             </Container>
         </section>
     );

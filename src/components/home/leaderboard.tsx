@@ -4,11 +4,11 @@ import { Container } from "@/components/ui/container";
 import { Trophy, Code, Star, Flame } from "lucide-react";
 
 const leaderboardData = [
-    { rank: 1, name: "Saifur Rahman", handle: "saif_71", score: 2850, solved: 450, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Saif" },
-    { rank: 2, name: "Abdullah Al Mamun", handle: "mamun_code", score: 2720, solved: 412, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mamun" },
-    { rank: 3, name: "Jannatul Ferdous", handle: "jannat_dev", score: 2680, solved: 398, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jannat" },
-    { rank: 4, name: "Tanvir Hasan", handle: "tanvir_pro", score: 2540, solved: 365, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tanvir" },
-    { rank: 5, name: "Nusrat Jahan", handle: "nusrat_x", score: 2490, solved: 340, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nusrat" },
+    { rank: 1, name: "Alexandra Chen", handle: "alex_code", score: 2850, solved: 450, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" },
+    { rank: 2, name: "Marcus Johnson", handle: "marcus_j", score: 2720, solved: 412, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus" },
+    { rank: 3, name: "Sarah Miller", handle: "sarah_dev", score: 2680, solved: 398, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" },
+    { rank: 4, name: "Dmitry Petrov", handle: "dmitry_v", score: 2540, solved: 365, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dmitry" },
+    { rank: 5, name: "Emily Watson", handle: "emily_w", score: 2490, solved: 340, avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily" },
 ];
 
 export const Leaderboard = () => {
