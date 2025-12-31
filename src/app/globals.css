@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+
+
+:root {
+  /* CPC Token System - Constant across themes */
+  --font-heading: var(--font-sans);
+
+  --primary-red: #E64848;
+  --primary-blue: #2D8CFF;
+  --accent-amber: #F4B400;
+
+  --brand-gradient: linear-gradient(135deg, #E64848 0%, #F4B400 50%, #2D8CFF 100%);
+
+  /* Light Mode (Default) */
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+
+  --primary: #E64848;
+  --primary-foreground: #F8FAFC;
+
+  --secondary: #2D8CFF;
+  --secondary-foreground: #F8FAFC;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+
+  --accent: #F4B400;
+  --accent-foreground: #0F172A;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #F8FAFC;
+
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #2D8CFF;
+
+  --radius: 0.5rem;
+
+
+}
+
+html.dark {
+  /* Dark Mode (Existing Design) */
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+
+  --card: #1E293B;
+  --card-foreground: #F8FAFC;
+
+  --popover: #1E293B;
+  --popover-foreground: #F8FAFC;
+
+  --primary: #E64848;
+  --primary-foreground: #F8FAFC;
+
+  --secondary: #2D8CFF;
+  --secondary-foreground: #F8FAFC;
+
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+
+  --accent: #F4B400;
+  --accent-foreground: #0F172A;
+
+  --destructive: #E64848;
+  --destructive-foreground: #F8FAFC;
+
+  --border: #334155;
+  --input: #1E293B;
+  --ring: #2D8CFF;
+}
+
+@theme {
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+
+  --color-cpc-red: var(--primary-red);
+  --color-cpc-blue: var(--primary-blue);
+  --color-cpc-amber: var(--accent-amber);
+  --image-brand-gradient: var(--brand-gradient);
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .glass {
+    @apply bg-background/70 backdrop-blur-md border border-border/40;
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-border/40;
+  }
+
+  .glass-hover {
+    @apply hover:bg-card/80 transition-colors duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--brand-gradient);
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased selection:bg-cpc-blue/30 selection:text-white;
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
