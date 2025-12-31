@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ArrowRight, Code2, Terminal } from "lucide-react";
+import Image from "next/image";
 
 export const Hero = () => {
     return (
@@ -50,7 +51,30 @@ export const Hero = () => {
 
                 </motion.div>
 
-                {/* Hero Visual - Tech Geometry */}
+                {/* Hero Visual - Custom Image */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative hidden lg:block"
+                >
+                    <div className="relative z-10 transform hover:scale-[1.02] transition-transform duration-500 rounded-2xl overflow-hidden shadow-2xl border border-border/10 max-w-md mx-auto">
+                        <Image
+                            src="/hero-image.png"
+                            alt="CPC Community"
+                            width={800}
+                            height={800}
+                            className="w-full h-auto object-cover"
+                            priority
+                        />
+                        {/* Overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-60" />
+                    </div>
+
+                    {/* Floating elements */}
+                    <div className="absolute -top-10 -right-10 w-24 h-24 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+                    <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-primary/20 rounded-full blur-3xl animate-pulse delay-700" />
+                </motion.div>
 
             </Container>
         </section>
