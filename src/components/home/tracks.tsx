@@ -41,7 +41,7 @@ export const Tracks = () => {
             <Container>
                 <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
-                        Our <span className="text-transparent bg-clip-text bg-brand-gradient">Tracks</span>
+                        Our <span className="text-gradient inline-block pb-1">Tracks</span>
                     </h2>
                     <p className="text-muted-foreground font-sans text-lg">
                         Specialized wings dedicated to mastering specific domains of technology.
