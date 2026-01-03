@@ -11,7 +11,7 @@ export const Footer = () => {
                     {/* Brand */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <div className="relative h-8 w-8">
+                            <div className="relative h-12 w-12">
                                 <Image
                                     src="/cpc-logo.png"
                                     alt="CPC Logo"
