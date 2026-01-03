@@ -14,7 +14,7 @@ export const RecentEvents = () => {
             <Container>
                 <div className="flex items-center justify-between mb-12">
                     <div>
-                        <h2 className="text-3xl font-bold font-spaceGrotesk text-foreground">Upcoming Events</h2>
+                        <h2 className="text-3xl font-bold font-heading text-foreground">Upcoming Events</h2>
                         <p className="text-muted-foreground mt-2">Join our latest workshops, seminars, and competitions.</p>
                     </div>
                     <Link href="/events">
@@ -29,7 +29,7 @@ export const RecentEvents = () => {
                         <Card key={event.id} className="group overflow-hidden border-border bg-card hover:border-primary/50 transition-all duration-500">
                             <div className={`h-48 w-full ${event.image} relative overflow-hidden`}>
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-                                <div className="absolute top-4 right-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-mono text-emerald-400 border border-emerald-500/20">
+                                <div className="absolute top-4 right-4 bg-background/80 backdrop-blur px-3 py-1 rounded-full text-xs font-mono text-accent border border-accent/20">
                                     {event.category}
                                 </div>
                             </div>

@@ -5,7 +5,7 @@ export const EVENTS = [
         date: "Dec 25, 2024",
         location: "DIU Auditorium",
         category: "Competition",
-        image: "bg-gradient-to-br from-emerald-900 to-slate-900",
+        image: "bg-gradient-to-br from-primary to-slate-900",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const EVENTS = [
         date: "Jan 10, 2025",
         location: "Lab 404",
         category: "Workshop",
-        image: "bg-gradient-to-br from-violet-900 to-slate-900",
+        image: "bg-gradient-to-br from-secondary to-slate-900",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const EVENTS = [
         date: "Jan 15, 2025",
         location: "Virtual",
         category: "Seminar",
-        image: "bg-gradient-to-br from-blue-900 to-slate-900",
+        image: "bg-gradient-to-br from-accent to-slate-900",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const EVENTS = [
         date: "Feb 01, 2025",
         location: "Lab 302",
         category: "Workshop",
-        image: "bg-gradient-to-br from-indigo-900 to-slate-900",
+        image: "bg-gradient-to-br from-primary to-slate-900",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const EVENTS = [
         date: "Feb 10, 2025",
         location: "Auditorium",
         category: "Seminar",
-        image: "bg-gradient-to-br from-red-900 to-slate-900",
+        image: "bg-gradient-to-br from-secondary to-slate-900",
     },
     {
         id: 6,
@@ -45,6 +45,6 @@ export const EVENTS = [
         date: "Mar 01, 2025",
         location: "Main Campus",
         category: "Competition",
-        image: "bg-gradient-to-br from-cyan-900 to-slate-900",
+        image: "bg-gradient-to-br from-accent to-slate-900",
     }
 ];

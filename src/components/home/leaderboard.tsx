@@ -25,7 +25,7 @@ export const Leaderboard = () => {
                             <span className="font-mono text-sm tracking-wider uppercase">Top Performers</span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
-                            Member <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-600">Leaderboard</span>
+                            Member <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Leaderboard</span>
                         </h2>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export const Leaderboard = () => {
                                                 flex items-center justify-center w-8 h-8 rounded-lg font-bold font-mono
                                                 ${index === 0 ? 'bg-accent/20 text-accent' :
                                                     index === 1 ? 'bg-muted text-muted-foreground' :
-                                                        index === 2 ? 'bg-orange-700/20 text-orange-400' : 'text-muted-foreground'}
+                                                        index === 2 ? 'bg-primary/20 text-primary' : 'text-muted-foreground'}
                                             `}>
                                                 {user.rank}
                                             </div>

@@ -19,9 +19,6 @@ export const Footer = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <span className="font-mono font-bold text-xl text-foreground">
-                                DIU<span className="text-emerald-500">CPC</span>
-                            </span>
                         </div>
                         <p className="text-muted-foreground text-sm leading-relaxed">
                             The most extensive club of Daffodil International University.
@@ -33,10 +30,10 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-bold text-foreground mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Our Mission</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Executive Committee</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Alumni</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Wing Activities</a></li>
+                            <li><a href="#" className="hover:text-primary transition-colors">Our Mission</a></li>
+                            <li><a href="#" className="hover:text-primary transition-colors">Executive Committee</a></li>
+                            <li><a href="#" className="hover:text-primary transition-colors">Alumni</a></li>
+                            <li><a href="#" className="hover:text-primary transition-colors">Wing Activities</a></li>
                         </ul>
                     </div>
 
@@ -44,10 +41,10 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-bold text-foreground mb-4">Resources</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Blog</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Events</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Projects Showcase</a></li>
-                            <li><a href="#" className="hover:text-emerald-400 transition-colors">Join Us</a></li>
+                            <li><a href="#" className="hover:text-secondary transition-colors">Blog</a></li>
+                            <li><a href="#" className="hover:text-secondary transition-colors">Events</a></li>
+                            <li><a href="#" className="hover:text-secondary transition-colors">Projects Showcase</a></li>
+                            <li><a href="#" className="hover:text-secondary transition-colors">Join Us</a></li>
                         </ul>
                     </div>
 
@@ -55,10 +52,10 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-bold text-foreground mb-4">Connect</h3>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-muted-foreground hover:text-emerald-500 transition-colors"><Github className="h-5 w-5" /></a>
-                            <a href="#" className="text-muted-foreground hover:text-blue-500 transition-colors"><Facebook className="h-5 w-5" /></a>
-                            <a href="#" className="text-muted-foreground hover:text-blue-400 transition-colors"><Linkedin className="h-5 w-5" /></a>
-                            <a href="#" className="text-muted-foreground hover:text-pink-500 transition-colors"><Instagram className="h-5 w-5" /></a>
+                            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github className="h-5 w-5" /></a>
+                            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors"><Facebook className="h-5 w-5" /></a>
+                            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors"><Linkedin className="h-5 w-5" /></a>
+                            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></a>
                         </div>
                     </div>
                 </div>

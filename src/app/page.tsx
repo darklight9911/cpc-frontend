@@ -6,7 +6,7 @@ import { TeamPreview } from "@/components/home/team-preview";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-background selection:bg-secondary/30">
       <Hero />
       <Tracks />
       <Leaderboard />

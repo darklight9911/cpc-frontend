@@ -6,7 +6,7 @@ export const BLOG_POSTS = [
         date: "Jan 03, 2025",
         author: "Alex Smith",
         category: "Artificial Intelligence",
-        image: "bg-gradient-to-br from-purple-900 to-slate-900",
+        image: "bg-gradient-to-br from-primary to-slate-900",
         readTime: "5 min read",
     },
     {
@@ -16,7 +16,7 @@ export const BLOG_POSTS = [
         date: "Dec 28, 2024",
         author: "Mike Chen",
         category: "Web Development",
-        image: "bg-gradient-to-br from-blue-900 to-slate-900",
+        image: "bg-gradient-to-br from-secondary to-slate-900",
         readTime: "8 min read",
     },
     {
@@ -26,7 +26,7 @@ export const BLOG_POSTS = [
         date: "Dec 15, 2024",
         author: "Sarah Jones",
         category: "Security",
-        image: "bg-gradient-to-br from-red-900 to-slate-900",
+        image: "bg-gradient-to-br from-accent to-slate-900",
         readTime: "6 min read",
     },
     {
@@ -36,7 +36,7 @@ export const BLOG_POSTS = [
         date: "Nov 30, 2024",
         author: "James Wilson",
         category: "Algorithms",
-        image: "bg-gradient-to-br from-emerald-900 to-slate-900",
+        image: "bg-gradient-to-br from-primary to-slate-900",
         readTime: "10 min read",
     },
     {
@@ -46,7 +46,7 @@ export const BLOG_POSTS = [
         date: "Nov 20, 2024",
         author: "Emily Davis",
         category: "Design",
-        image: "bg-gradient-to-br from-pink-900 to-slate-900",
+        image: "bg-gradient-to-br from-secondary to-slate-900",
         readTime: "7 min read",
     },
     {
@@ -56,7 +56,7 @@ export const BLOG_POSTS = [
         date: "Nov 10, 2024",
         author: "Daniel Brown",
         category: "Cloud",
-        image: "bg-gradient-to-br from-cyan-900 to-slate-900",
+        image: "bg-gradient-to-br from-accent to-slate-900",
         readTime: "6 min read",
     }
 ];

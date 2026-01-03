@@ -10,8 +10,8 @@ export default function ProjectsPage() {
         <main className="min-h-screen pt-20 md:pt-24 bg-background">
             <Container className="py-12 md:py-24">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold font-spaceGrotesk text-foreground mb-6">
-                        Our <span className="text-cyan-400">Projects</span>
+                    <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
+                        Our <span className="text-primary">Projects</span>
                     </h1>
                     <p className="text-lg text-muted-foreground">
                         Showcasing innovative solutions and creative applications built by our talented community members.
@@ -20,13 +20,13 @@ export default function ProjectsPage() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {PROJECTS.map((project) => (
-                        <div key={project.id} className="group flex flex-col bg-card border border-border rounded-xl overlow-hidden hover:border-cyan-500/50 transition-all duration-300">
+                        <div key={project.id} className="group flex flex-col bg-card border border-border rounded-xl overlow-hidden hover:border-primary/50 transition-all duration-300">
                             <div className={`h-48 w-full ${project.image} relative overflow-hidden rounded-t-xl group-hover:brightness-110 transition-all`}>
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                             </div>
 
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyan-400 transition-colors">
+                                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
                                 <p className="text-sm text-muted-foreground mb-6 line-clamp-3">
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
                                     <Link href={project.links.github} className="text-muted-foreground hover:text-foreground flex items-center text-sm transition-colors">
                                         <Github className="h-4 w-4 mr-2" /> Code
                                     </Link>
-                                    <Link href={project.links.demo} className="text-cyan-400 hover:text-cyan-300 flex items-center text-sm font-medium transition-colors">
+                                    <Link href={project.links.demo} className="text-primary hover:text-primary/80 flex items-center text-sm font-medium transition-colors">
                                         Live Demo <ExternalLink className="h-3 w-3 ml-2" />
                                     </Link>
                                 </div>
