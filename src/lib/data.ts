@@ -1,0 +1,50 @@
+export const EVENTS = [
+    {
+        id: 1,
+        title: "Hackathon 2024: Cyber Future",
+        date: "Dec 25, 2024",
+        location: "DIU Auditorium",
+        category: "Competition",
+        image: "bg-gradient-to-br from-emerald-900 to-slate-900",
+    },
+    {
+        id: 2,
+        title: "AI Workshop: Generative Art",
+        date: "Jan 10, 2025",
+        location: "Lab 404",
+        category: "Workshop",
+        image: "bg-gradient-to-br from-violet-900 to-slate-900",
+    },
+    {
+        id: 3,
+        title: "Tech Talk: Career in DevOps",
+        date: "Jan 15, 2025",
+        location: "Virtual",
+        category: "Seminar",
+        image: "bg-gradient-to-br from-blue-900 to-slate-900",
+    },
+    {
+        id: 4,
+        title: "Web Development Bootcamp",
+        date: "Feb 01, 2025",
+        location: "Lab 302",
+        category: "Workshop",
+        image: "bg-gradient-to-br from-indigo-900 to-slate-900",
+    },
+    {
+        id: 5,
+        title: "Cyber Security Awareness",
+        date: "Feb 10, 2025",
+        location: "Auditorium",
+        category: "Seminar",
+        image: "bg-gradient-to-br from-red-900 to-slate-900",
+    },
+    {
+        id: 6,
+        title: "Programming Contest 2025",
+        date: "Mar 01, 2025",
+        location: "Main Campus",
+        category: "Competition",
+        image: "bg-gradient-to-br from-cyan-900 to-slate-900",
+    }
+];

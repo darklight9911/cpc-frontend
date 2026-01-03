@@ -4,32 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const EVENTS = [
-    {
-        id: 1,
-        title: "Hackathon 2024: Cyber Future",
-        date: "Dec 25, 2024",
-        location: "DIU Auditorium",
-        category: "Competition",
-        image: "bg-gradient-to-br from-emerald-900 to-slate-900",
-    },
-    {
-        id: 2,
-        title: "AI Workshop: Generative Art",
-        date: "Jan 10, 2025",
-        location: "Lab 404",
-        category: "Workshop",
-        image: "bg-gradient-to-br from-violet-900 to-slate-900",
-    },
-    {
-        id: 3,
-        title: "Tech Talk: Career in DevOps",
-        date: "Jan 15, 2025",
-        location: "Virtual",
-        category: "Seminar",
-        image: "bg-gradient-to-br from-blue-900 to-slate-900",
-    },
-];
+import { EVENTS } from "@/lib/data";
+
+const RECENT_EVENTS = EVENTS.slice(0, 3);
 
 export const RecentEvents = () => {
     return (
@@ -48,7 +25,7 @@ export const RecentEvents = () => {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {EVENTS.map((event) => (
+                    {RECENT_EVENTS.map((event) => (
                         <Card key={event.id} className="group overflow-hidden border-border bg-card hover:border-primary/50 transition-all duration-500">
                             <div className={`h-48 w-full ${event.image} relative overflow-hidden`}>
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
