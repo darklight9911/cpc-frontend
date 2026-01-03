@@ -11,7 +11,7 @@ export default function ProjectsPage() {
             <Container className="py-12 md:py-24">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
-                        Our <span className="text-primary">Projects</span>
+                        Our <span className="text-gradient">Projects</span>
                     </h1>
                     <p className="text-lg text-muted-foreground">
                         Showcasing innovative solutions and creative applications built by our talented community members.

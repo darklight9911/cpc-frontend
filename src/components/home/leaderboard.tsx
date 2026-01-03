@@ -25,7 +25,7 @@ export const Leaderboard = () => {
                             <span className="font-mono text-sm tracking-wider uppercase">Top Performers</span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
-                            Member <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-red-500">Leaderboard</span>
+                            Member <span className="text-gradient">Leaderboard</span>
                         </h2>
                     </div>
                 </div>

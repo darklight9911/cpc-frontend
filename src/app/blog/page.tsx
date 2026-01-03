@@ -11,7 +11,7 @@ export default function BlogPage() {
             <Container className="py-12 md:py-24">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
-                        Latest <span className="text-secondary">Insights</span>
+                        Latest <span className="text-gradient">Insights</span>
                     </h1>
                     <p className="text-lg text-muted-foreground">
                         Articles, tutorials, and updates from the CPC team and community.

@@ -14,7 +14,7 @@ export const TeamPreview = () => {
             <Container>
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">
-                        Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-blue-400">Executive Committee</span>
+                        Meet the <span className="text-gradient">Executive Committee</span>
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
                         The dedicated team working behind the scenes to bring you the best tech events and workshops.

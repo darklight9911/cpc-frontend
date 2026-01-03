@@ -14,7 +14,7 @@ export const RecentEvents = () => {
             <Container>
                 <div className="flex items-center justify-between mb-12">
                     <div>
-                        <h2 className="text-3xl font-bold font-heading text-foreground">Upcoming Events</h2>
+                        <h2 className="text-3xl font-bold font-heading text-foreground">Upcoming <span className="text-gradient">Events</span></h2>
                         <p className="text-muted-foreground mt-2">Join our latest workshops, seminars, and competitions.</p>
                     </div>
                     <Link href="/events">

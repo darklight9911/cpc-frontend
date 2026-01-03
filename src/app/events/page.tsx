@@ -10,7 +10,7 @@ export default function EventsPage() {
             <Container className="py-12 md:py-24">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
-                        Upcoming <span className="text-accent">Events</span>
+                        Upcoming <span className="text-gradient">Events</span>
                     </h1>
                     <p className="text-lg text-muted-foreground">
                         Join our workshops, seminars, and hackathons to level up your skills and connect with the community.

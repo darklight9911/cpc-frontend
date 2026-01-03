@@ -9,7 +9,7 @@ export default function TeamPage() {
             <Container className="py-12 md:py-24">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
-                        Meet Our <span className="text-secondary">Team</span>
+                        Meet Our <span className="text-gradient">Team</span>
                     </h1>
                     <p className="text-lg text-muted-foreground">
                         The brilliant minds working behind the scenes to make CPC the best community for tech enthusiasts.
