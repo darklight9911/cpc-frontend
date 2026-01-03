@@ -4,36 +4,9 @@ import { Container } from "@/components/ui/container";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
-const TEAM = [
-    {
-        id: 1,
-        name: "Alex Smith",
-        role: "President",
-        image: "/avatars/1.png", // Placeholder
-        socials: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-        id: 2,
-        name: "Sarah Jones",
-        role: "General Secretary",
-        image: "/avatars/2.png", // Placeholder
-        socials: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-        id: 3,
-        name: "Mike Chen",
-        role: "Head of Development",
-        image: "/avatars/3.png", // Placeholder
-        socials: { github: "#", linkedin: "#", twitter: "#" },
-    },
-    {
-        id: 4,
-        name: "Emily Davis",
-        role: "Head of Design",
-        image: "/avatars/4.png", // Placeholder
-        socials: { github: "#", linkedin: "#", twitter: "#" },
-    },
-];
+import { TEAM } from "@/lib/team-data";
+
+const TEAM_PREVIEW = TEAM.slice(0, 4);
 
 export const TeamPreview = () => {
     return (
@@ -49,7 +22,7 @@ export const TeamPreview = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {TEAM.map((member) => (
+                    {TEAM_PREVIEW.map((member) => (
                         <div key={member.id} className="group relative">
                             <div className="relative overflow-hidden rounded-xl bg-card aspect-[3/4] border border-border group-hover:border-violet-500/50 transition-all duration-300">
                                 {/* Placeholder for Image */}
