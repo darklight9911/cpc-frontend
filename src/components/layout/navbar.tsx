@@ -68,9 +68,14 @@ export const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
-                        <Button variant="cyber" size="sm">
-                            Join Club
-                        </Button>
+                        <div className="flex items-center gap-2">
+                            <Button variant="ghost" size="sm" asChild>
+                                <Link href="/auth/login">Login</Link>
+                            </Button>
+                            <Button variant="cyber" size="sm" asChild>
+                                <Link href="/auth/register">Register</Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
@@ -106,9 +111,14 @@ export const Navbar = () => {
                                     {link.label}
                                 </Link>
                             ))}
-                            <Button variant="cyber" className="w-full">
-                                Join Club
-                            </Button>
+                            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
+                                <Button variant="ghost" asChild>
+                                    <Link href="/auth/login">Login</Link>
+                                </Button>
+                                <Button variant="cyber" asChild>
+                                    <Link href="/auth/register">Register</Link>
+                                </Button>
+                            </div>
                         </Container>
                     </motion.div>
                 )}
