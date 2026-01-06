@@ -3,19 +3,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { ArrowRight, Code2, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import BlurText from "@/components/ui/blur-text";
 
 export const Hero = () => {
     return (
         <section className="relative min-h-auto lg:min-h-[90vh] flex items-start lg:items-center justify-center overflow-hidden pt-32 pb-20 lg:pt-16 lg:pb-0 font-sans">
-            {/* Background: Hexagonal Mesh Pattern (SVG Simulation) */}
+            {/* Background: Synced with Auth Pages (Gray Grid + Red/Blue Gradients) */}
             <div className="absolute inset-0 bg-background">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20" />
-                {/* Hexagon overlay effect (simple radial gradient for now to mimic glow) */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse" />
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse delay-1000" />
+                {/* Grid Pattern Overlay matching Auth Layout */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+
+                {/* Background Gradients matching Auth Layout */}
+                <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-cpc-red/20 rounded-full blur-[120px] pointer-events-none opacity-50 animate-pulse" />
+                <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-cpc-blue/20 rounded-full blur-[120px] pointer-events-none opacity-50 animate-pulse delay-1000" />
             </div>
 
             <Container className="relative z-10 grid grid-cols-2 gap-4 lg:gap-12 items-center">

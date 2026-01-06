@@ -15,7 +15,7 @@ export const Leaderboard = () => {
     return (
         <section className="py-24 bg-background relative overflow-hidden">
             {/* Background Mesh */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(120,120,120,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(120,120,120,0.1)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+
 
             <Container>
                 <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
