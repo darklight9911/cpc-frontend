@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
@@ -21,6 +22,7 @@ const links = [
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,27 +54,40 @@ export const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
                     <div className="flex items-center space-x-6">
                         {links.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-sm font-medium text-muted-foreground hover:text-secondary transition-colors relative group"
+                                className={cn(
+                                    "text-sm font-medium transition-colors relative group",
+                                    pathname === link.href ? "text-secondary" : "text-muted-foreground hover:text-secondary"
+                                )}
                             >
                                 {link.label}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
+                                <span className={cn(
+                                    "absolute -bottom-1 left-0 h-0.5 bg-secondary transition-all",
+                                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                                )} />
                             </Link>
                         ))}
                     </div>
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <div className="flex items-center gap-2">
-                            <Button variant="ghost" size="sm" asChild>
+                            <Button
+                                variant={pathname === "/auth/login" ? "cyber" : "ghost"}
+                                size="sm"
+                                asChild
+                            >
                                 <Link href="/auth/login">Login</Link>
                             </Button>
-                            <Button variant="cyber" size="sm" asChild>
+                            <Button
+                                variant={pathname === "/auth/register" ? "cyber" : pathname === "/auth/login" ? "ghost" : "cyber"}
+                                size="sm"
+                                asChild
+                            >
                                 <Link href="/auth/register">Register</Link>
                             </Button>
                         </div>

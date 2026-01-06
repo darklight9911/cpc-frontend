@@ -2,6 +2,8 @@
 
 import ClickSpark from "@/components/ui/click-spark";
 
+const SPARK_COLORS = ["#E64848", "#F4B400", "#2D8CFF"];
+
 export default function SparkWrapper({
     children,
 }: {
@@ -9,7 +11,7 @@ export default function SparkWrapper({
 }) {
     return (
         <ClickSpark
-            sparkColor={["#E64848", "#F4B400", "#2D8CFF"]}
+            sparkColor={SPARK_COLORS}
             sparkSize={12}
             sparkRadius={25}
             sparkCount={8}
