@@ -35,7 +35,7 @@ export default function ForgotPasswordPage() {
             <CardContent className="space-y-4">
                 <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="university mail" />
+                    <Input id="email" type="email" placeholder="University mail" />
                 </div>
             </CardContent>
             <CardFooter className="flex flex-col space-y-4">
