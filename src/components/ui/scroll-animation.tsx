@@ -19,7 +19,7 @@ export function ScrollAnimation({
     variant = "fade-up",
     delay = 0,
     duration = 0.5,
-    viewport = { once: true, margin: "-50px", amount: 0.2 },
+    viewport = { once: true, margin: "-20px", amount: 0.1 },
 }: ScrollAnimationProps) {
     const getVariants = () => {
         switch (variant) {

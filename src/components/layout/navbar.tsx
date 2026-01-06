@@ -112,10 +112,10 @@ export const Navbar = () => {
                                 </Link>
                             ))}
                             <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
-                                <Button variant="ghost" asChild>
+                                <Button variant="ghost" asChild onClick={() => setIsOpen(false)}>
                                     <Link href="/auth/login">Login</Link>
                                 </Button>
-                                <Button variant="cyber" asChild>
+                                <Button variant="cyber" asChild onClick={() => setIsOpen(false)}>
                                     <Link href="/auth/register">Register</Link>
                                 </Button>
                             </div>
