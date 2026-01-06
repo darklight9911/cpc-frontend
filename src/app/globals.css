@@ -46,6 +46,10 @@
 
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 html.dark {
   /* Dark Mode (Existing Design) */
   --background: #0F172A;

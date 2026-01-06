@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
+import SparkWrapper from "@/components/layout/spark-wrapper";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -35,9 +37,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <SparkWrapper>
+            <Navbar />
+            {children}
+            <Footer />
+          </SparkWrapper>
         </ThemeProvider>
       </body>
     </html>
