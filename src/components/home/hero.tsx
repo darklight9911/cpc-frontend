@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ArrowRight, Code2, Terminal } from "lucide-react";
 import Image from "next/image";
+import BlurText from "@/components/ui/blur-text";
 
 export const Hero = () => {
     return (
@@ -26,11 +27,37 @@ export const Hero = () => {
                 >
 
 
-                    <h1 className="text-6xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.1] font-heading">
-                        Code. <br />
-                        <span className="text-gradient">Create.</span> <br />
-                        Connect.
-                    </h1>
+                    <div className="text-6xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.1] font-heading">
+                        <div>
+                            <BlurText
+                                text="Code."
+                                delay={150}
+                                animateBy="letters"
+                                direction="top"
+                                className="inline-block"
+                            />
+                        </div>
+                        <div>
+                            <BlurText
+                                text="Create."
+                                delay={150}
+                                animateBy="letters"
+                                direction="top"
+                                className="inline-block text-gradient"
+                                animationFrom={{ opacity: 0, y: -20 }}
+                                animationTo={{ opacity: 1, y: 0 }}
+                            />
+                        </div>
+                        <div>
+                            <BlurText
+                                text="Connect."
+                                delay={150}
+                                animateBy="letters"
+                                direction="top"
+                                className="inline-block"
+                            />
+                        </div>
+                    </div>
 
                     <p className="text-lg text-muted-foreground max-w-xl leading-relaxed font-sans">
                         The Computer and Programming Club of Daffodil International University.
