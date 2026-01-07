@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   keywords: ["DIU", "CPC", "Computer Club", "Programming", "Tech"],
 };
 
+import { Toaster } from "@/components/ui/sonner";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,6 +43,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <Toaster position="top-center" richColors />
           </SparkWrapper>
         </ThemeProvider>
       </body>
