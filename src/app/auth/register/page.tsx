@@ -34,19 +34,13 @@ export default function RegisterPage() {
             </CardHeader>
             <CardContent className="space-y-4">
 
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                        <Label htmlFor="first-name">First name</Label>
-                        <Input id="first-name" placeholder="e.g. Umme" />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="last-name">Last name</Label>
-                        <Input id="last-name" placeholder="e.g. Munia" />
-                    </div>
+                <div className="space-y-2">
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input id="name" placeholder="e.g. Umme Munia" />
                 </div>
                 <div className="space-y-2">
-                    <Label htmlFor="id">Student or Employee ID</Label>
-                    <Input id="id" placeholder="e.g. 241-15-540 or 710002642" />
+                    <Label htmlFor="uni_id">Student or Employee ID</Label>
+                    <Input id="uni_id" placeholder="e.g. 241-15-540 or 710002642" />
                 </div>
                 <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>

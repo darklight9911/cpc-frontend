@@ -16,7 +16,7 @@ export const Hero = () => {
                     src="/hero-bg.jpg"
                     alt="CPC Hero Background"
                     fill
-                    className="object-cover object-center brightness-125 dark:brightness-100"
+                    className="object-cover object-top brightness-125 dark:brightness-100"
                     priority
                     quality={90}
                 />
