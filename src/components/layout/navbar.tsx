@@ -35,7 +35,7 @@ export const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-0 z-50 w-full transition-all duration-300 border-b border-white/5",
+                "fixed top-0 z-50 w-full transition-all duration-300 border-b border-white/5 shadow-[0_2px_4px_rgba(0,0,0,0.1)]",
                 scrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/70 backdrop-blur-md"
             )}
         >
