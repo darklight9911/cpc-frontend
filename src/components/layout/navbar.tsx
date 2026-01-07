@@ -41,12 +41,12 @@ export const Navbar = () => {
         >
             <Container className="flex h-16 md:h-20 items-center justify-between">
                 <Link href="/" className="flex items-center group">
-                    <div className="relative flex h-12 w-12 md:h-16 md:w-16 items-center justify-center">
+                    <div className="relative flex h-14 w-14 md:h-20 md:w-20 items-center justify-center">
                         <Image
                             src="/cpc-logo.png"
                             alt="CPC Logo"
-                            width={64}
-                            height={64}
+                            width={80}
+                            height={80}
                             className="object-contain transition-transform duration-300 group-hover:scale-105"
                             priority
                         />
@@ -61,7 +61,7 @@ export const Navbar = () => {
                                 key={link.href}
                                 href={link.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors relative group",
+                                    "text-sm font-medium transition-colors relative group h-9 flex items-center",
                                     pathname === link.href ? "text-secondary" : "text-muted-foreground hover:text-secondary"
                                 )}
                             >
