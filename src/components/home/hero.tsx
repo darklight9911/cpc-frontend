@@ -16,16 +16,17 @@ export const Hero = () => {
                     src="/hero-bg.jpg"
                     alt="CPC Hero Background"
                     fill
-                    className="object-cover object-top brightness-125 dark:brightness-100"
+                    className="object-cover object-top brightness-90 dark:brightness-75"
                     priority
                     quality={90}
                 />
                 {/* Professional Overlay: Gradient for depth + Dark overlay for text contrast */}
                 {/* Professional Overlay: Gradient for depth + Dark overlay for text contrast */}
                 <div className="absolute inset-0 bg-white/20 dark:bg-black/20 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-black/90 dark:via-black/40 dark:to-transparent z-10" />
-                {/* Left-to-Right Fade for Text Readability vs Faces (Dark Mode Only) */}
-                <div className="absolute inset-0 dark:bg-gradient-to-r dark:from-black/90 dark:via-black/60 dark:to-transparent z-10" />
+                {/* Bottom gradient removed for Light Mode to show faces, kept for Dark Mode */}
+                <div className="absolute inset-0 dark:bg-gradient-to-t dark:from-black/90 dark:via-black/40 dark:to-transparent z-10" />
+                {/* Left-to-Right Fade for Text Readability vs Faces */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent dark:from-black/90 dark:via-black/60 dark:to-transparent z-10" />
             </div>
 
             <Container className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -36,7 +37,7 @@ export const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="col-span-1 flex flex-col justify-center text-center lg:text-left"
                 >
-                    <div className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1] font-heading drop-shadow-lg">
+                    <div className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.1] font-heading drop-shadow-lg">
                         <div>
                             <BlurText
                                 text="Code."
@@ -68,18 +69,18 @@ export const Hero = () => {
                         </div>
                     </div>
 
-                    <p className="text-lg sm:text-xl text-gray-200 max-w-xl leading-relaxed font-sans mt-6 mx-auto lg:mx-0 drop-shadow-md">
+                    <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 max-w-xl leading-relaxed font-sans mt-6 mx-auto lg:mx-0 drop-shadow-md">
                         The Computer and Programming Club of Daffodil International University.
-                        A community driven by <span className="text-blue-300 font-semibold">logic</span>,
-                        built on <span className="text-purple-300 font-semibold">passion</span>,
-                        and connected by <span className="text-pink-300 font-semibold">innovation</span>.
+                        A community driven by <span className="text-blue-600 dark:text-blue-300 font-semibold">logic</span>,
+                        built on <span className="text-purple-600 dark:text-purple-300 font-semibold">passion</span>,
+                        and connected by <span className="text-pink-600 dark:text-pink-300 font-semibold">innovation</span>.
                     </p>
 
                     <div className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
-                        <Button size="lg" className="font-bold bg-white text-black hover:bg-gray-200 border-none shadow-lg transition-transform hover:scale-105">
+                        <Button size="lg" className="font-bold bg-gray-900 text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 border-none shadow-lg transition-transform hover:scale-105">
                             Join the Club <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
-                        <Button size="lg" variant="outline" className="text-white border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-transform hover:scale-105">
+                        <Button size="lg" variant="outline" className="text-gray-900 border-gray-900/30 bg-white/10 hover:bg-white/20 dark:text-white dark:border-white/30 backdrop-blur-sm transition-transform hover:scale-105">
                             View Events
                         </Button>
                     </div>
