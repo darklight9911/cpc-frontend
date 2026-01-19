@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/components/providers/auth-provider";
 
 const links = [
     { href: "/", label: "Home" },
@@ -23,6 +24,7 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
+    const { user, logout } = useAuth();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -76,20 +78,36 @@ export const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <div className="flex items-center gap-2">
-                            <Button
-                                variant={pathname === "/auth/login" ? "cyber" : "ghost"}
-                                size="sm"
-                                asChild
-                            >
-                                <Link href="/auth/login">Login</Link>
-                            </Button>
-                            <Button
-                                variant={pathname === "/auth/register" ? "cyber" : pathname === "/auth/login" ? "ghost" : "cyber"}
-                                size="sm"
-                                asChild
-                            >
-                                <Link href="/auth/register">Register</Link>
-                            </Button>
+                            {user ? (
+                                <>
+                                    <span className="text-sm font-medium mr-2">{user.name}</span>
+                                    <Button
+                                        variant="ghost"
+                                        size="sm"
+                                        onClick={() => logout()}
+                                        className="text-red-500 hover:text-red-600 hover:bg-red-500/10"
+                                    >
+                                        Logout
+                                    </Button>
+                                </>
+                            ) : (
+                                <>
+                                    <Button
+                                        variant={pathname === "/auth/login" ? "cyber" : "ghost"}
+                                        size="sm"
+                                        asChild
+                                    >
+                                        <Link href="/auth/login">Login</Link>
+                                    </Button>
+                                    <Button
+                                        variant={pathname === "/auth/register" ? "cyber" : pathname === "/auth/login" ? "ghost" : "cyber"}
+                                        size="sm"
+                                        asChild
+                                    >
+                                        <Link href="/auth/register">Register</Link>
+                                    </Button>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -126,13 +144,34 @@ export const Navbar = () => {
                                     {link.label}
                                 </Link>
                             ))}
-                            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
-                                <Button variant={pathname === "/auth/login" ? "cyber" : "ghost"} asChild onClick={() => setIsOpen(false)}>
-                                    <Link href="/auth/login">Login</Link>
-                                </Button>
-                                <Button variant={pathname === "/auth/register" ? "cyber" : pathname === "/auth/login" ? "ghost" : "cyber"} asChild onClick={() => setIsOpen(false)}>
-                                    <Link href="/auth/register">Register</Link>
-                                </Button>
+                            <div className="flex flex-col gap-4 pt-4 border-t border-white/5">
+                                {user ? (
+                                    <>
+                                        <div className="flex items-center justify-between px-2">
+                                            <span className="text-sm font-medium text-muted-foreground">Signed in as</span>
+                                            <span className="text-sm font-semibold">{user.name}</span>
+                                        </div>
+                                        <Button
+                                            variant="ghost"
+                                            onClick={() => {
+                                                logout();
+                                                setIsOpen(false);
+                                            }}
+                                            className="w-full text-red-500 hover:text-red-600 hover:bg-red-500/10 justify-start px-2"
+                                        >
+                                            Logout
+                                        </Button>
+                                    </>
+                                ) : (
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <Button variant={pathname === "/auth/login" ? "cyber" : "ghost"} asChild onClick={() => setIsOpen(false)}>
+                                            <Link href="/auth/login">Login</Link>
+                                        </Button>
+                                        <Button variant={pathname === "/auth/register" ? "cyber" : pathname === "/auth/login" ? "ghost" : "cyber"} asChild onClick={() => setIsOpen(false)}>
+                                            <Link href="/auth/register">Register</Link>
+                                        </Button>
+                                    </div>
+                                )}
                             </div>
                         </Container>
                     </motion.div>

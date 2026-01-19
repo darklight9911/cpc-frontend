@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { AuthProvider } from "@/components/providers/auth-provider";
 
 import SparkWrapper from "@/components/layout/spark-wrapper";
 
@@ -40,12 +41,14 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <SparkWrapper>
-            <Navbar />
-            {children}
-            <Footer />
-            <Toaster position="top-center" richColors />
-          </SparkWrapper>
+          <AuthProvider>
+            <SparkWrapper>
+              <Navbar />
+              {children}
+              <Footer />
+              <Toaster position="top-center" richColors />
+            </SparkWrapper>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
